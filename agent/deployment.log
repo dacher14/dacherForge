@@ -1,0 +1,11 @@
+════════════════════════════════════════════════════════════════
+[0;32m🚀 DacherForge Deployment to VPS[0m
+════════════════════════════════════════════════════════════════
+
+📍 Target: root@85.192.26.36
+🔐 Using password authentication
+
+[1;33m[1/5] Setting up VPS...[0m
+Pseudo-terminal will not be allocated because stdin is not a terminal.
+ssh: connect to host 85.192.26.36 port 22: Connection timed out
+[0;31m❌ VPS setup failed[0m
