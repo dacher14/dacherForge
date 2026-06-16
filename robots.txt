@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dacher14.github.io/dacherForge/sitemap.xml
