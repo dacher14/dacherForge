@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="options.css" />
+  <title>LinguaForge — настройки</title>
+</head>
+<body>
+  <div class="wrap">
+    <header class="head">
+      <span class="logo">L</span>
+      <div>
+        <h1>LinguaForge</h1>
+        <p class="muted">Настройки расширения</p>
+      </div>
+    </header>
+
+    <form id="form">
+      <fieldset>
+        <legend>Доступ к модели</legend>
+
+        <label for="apiKey">API-ключ Anthropic</label>
+        <div class="key-row">
+          <input id="apiKey" type="password" placeholder="sk-ant-…" autocomplete="off" spellcheck="false" />
+          <button type="button" id="toggle-key" class="ghost small">Показать</button>
+        </div>
+        <p class="hint">
+          Ключ хранится только в этом браузере (chrome.storage.local) и отправляется
+          напрямую в api.anthropic.com. Получить ключ можно на
+          console.anthropic.com.
+        </p>
+
+        <label for="model">Модель</label>
+        <select id="model"></select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Языки и стиль</legend>
+
+        <div class="grid">
+          <div>
+            <label for="nativeLanguage">Твой родной язык</label>
+            <select id="nativeLanguage"></select>
+            <p class="hint">На нём будут пояснения к ошибкам.</p>
+          </div>
+          <div>
+            <label for="targetLanguage">Целевой язык</label>
+            <select id="targetLanguage"></select>
+            <p class="hint">Язык, на котором ты пишешь.</p>
+          </div>
+        </div>
+
+        <label for="tone">Тон по умолчанию</label>
+        <select id="tone"></select>
+      </fieldset>
+
+      <div class="actions">
+        <button type="button" id="test" class="ghost">Проверить ключ</button>
+        <button type="submit" id="save" class="primary">Сохранить</button>
+      </div>
+      <p id="status" class="status" hidden></p>
+    </form>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>

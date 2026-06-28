@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="popup.css" />
+  <title>LinguaForge</title>
+</head>
+<body>
+  <header class="bar">
+    <div class="brand">
+      <span class="logo">L</span>
+      <span>LinguaForge</span>
+    </div>
+    <button id="open-options" class="icon-btn" title="Настройки" aria-label="Настройки">⚙</button>
+  </header>
+
+  <main>
+    <div class="row">
+      <label for="target" class="muted">Целевой язык</label>
+      <select id="target"></select>
+    </div>
+
+    <textarea id="input" rows="5" placeholder="Напиши или вставь текст…"></textarea>
+
+    <div class="actions">
+      <button id="paste-selection" class="ghost" title="Вставить текст, выделенный на странице">Вставить выделенное</button>
+      <button id="check" class="primary">Проверить</button>
+    </div>
+
+    <div id="status" class="status" hidden></div>
+
+    <section id="result" class="result" hidden>
+      <p id="summary" class="summary"></p>
+
+      <div class="block">
+        <div class="block-head">
+          <h3>Исправленный текст</h3>
+          <button id="copy" class="ghost small">Копировать</button>
+        </div>
+        <div id="corrected" class="corrected"></div>
+      </div>
+
+      <div id="translation-block" class="block" hidden>
+        <div class="block-head"><h3>Перевод</h3></div>
+        <div id="translation" class="corrected"></div>
+      </div>
+
+      <div id="issues-block" class="block" hidden>
+        <div class="block-head"><h3>Ошибки и пояснения</h3></div>
+        <ul id="issues" class="issues"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
